@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+/* 
 a {
   font-weight: 500;
   color: #646cff;
@@ -73,7 +73,12 @@ button:focus-visible {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
+
+#app {
+  width: 100vw;
+  height: 100vh;
+} 
 
 @media (prefers-color-scheme: light) {
   :root {

@@ -1,7 +1,8 @@
 <route>
   {
     meta: {
-      title: '用户列表'
+      title: '用户列表',
+      icon: 'user-outlined'
     }
   }
 </route>
