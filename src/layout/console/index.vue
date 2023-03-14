@@ -7,44 +7,41 @@ import Sider from './Sider';
 
 <!-- 方式二 -->
 <script>
-import Sider from './Sider/index.vue';
+import MSider from './MSider/index.vue';
 import MHeader from './MHeader/index.vue';
 
 export default {
-  components: {
-    Sider,
-    MHeader,
-  },
-  data() {
-    return {
-    }
-  }
-}
+	components: {
+		MSider,
+		MHeader,
+	},
+	data() {
+		return {};
+	},
+};
 </script>
 <script setup>
-  // import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
 
-  // const router = useRouter();
+// const router = useRouter();
 </script>
 
 <template>
-  <a-layout class="layout">
-    <a-layout-sider>
-      <Sider />
-    </a-layout-sider>
-    <a-layout>
-      <a-layout-header>
-        <m-header />
-      </a-layout-header>
-      <!-- <a-layout-header>header</a-layout-header> -->
-      <a-layout-content>
-        <div class="layout-content">
-          <router-view></router-view>
-        </div>
-      </a-layout-content>
-      <!-- <a-layout-footer>Footer</a-layout-footer> -->
-    </a-layout>
-  </a-layout>
+	<a-layout class="layout">
+		<a-layout-sider> <m-sider /> </a-layout-sider>
+		<a-layout>
+			<a-layout-header>
+				<m-header />
+			</a-layout-header>
+			<a-layout-content>
+				<div class="layout-content">
+					<router-view></router-view>
+				</div>
+			</a-layout-content>
+			<!-- <a-layout-footer>Footer</a-layout-footer> -->
+		</a-layout>
+	</a-layout>
 </template>
 
+<style src="../../style/console/index.less"></style>
 <style src="./index.less" scoped></style>

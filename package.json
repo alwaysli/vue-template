@@ -1,71 +1,74 @@
 {
-  "name": "vue-web",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx,js}\" --fix",
-    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint:lint-staged": "lint-staged",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "ant-design-vue": "^3.2.15",
-    "axios": "^1.3.4",
-    "nprogress": "^0.2.0",
-    "pinia": "^2.0.32",
-    "pinia-plugin-persist": "^1.0.0",
-    "vue": "^3.2.45",
-    "vue-router": "4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/eslint-parser": "^7.19.1",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0",
-    "husky": "^8.0.3",
-    "less": "^4.1.3",
-    "lint-staged": "^13.1.2",
-    "prettier": "^2.8.4",
-    "vite": "^4.1.0",
-    "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-pages": "^0.28.0",
-    "vite-plugin-vue-layouts": "^0.8.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-      "prettier --write--parser json"
-    ],
-    "package.json": [
-      "prettier --write"
-    ],
-    "*.vue": [
-      "eslint --fix",
-      "prettier --write",
-      "stylelint --fix"
-    ],
-    "*.{scss,less,styl,html}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
-  }
+	"name": "vue-web",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx,js}\" --fix",
+		"lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+		"lint:lint-staged": "lint-staged",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"ant-design-vue": "^3.2.15",
+		"axios": "^1.3.4",
+		"nprogress": "^0.2.0",
+		"pinia": "^2.0.32",
+		"pinia-plugin-persist": "^1.0.0",
+		"vue": "^3.2.45",
+		"vue-router": "4"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.0",
+		"@babel/eslint-parser": "^7.19.1",
+		"@vitejs/plugin-vue": "^4.0.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.35.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-vue": "^9.9.0",
+		"husky": "^8.0.3",
+		"less": "^4.1.3",
+		"lint-staged": "^13.1.2",
+		"mockjs": "^1.1.0",
+		"prettier": "^2.8.4",
+		"vite": "^4.1.0",
+		"vite-plugin-eslint": "^1.8.1",
+		"vite-plugin-mock": "^2.9.6",
+		"vite-plugin-pages": "^0.28.0",
+		"vite-plugin-vue-layouts": "^0.8.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+			"prettier --write--parser json"
+		],
+		"package.json": [
+			"prettier --write"
+		],
+		"*.vue": [
+			"eslint --fix",
+			"prettier --write",
+			"stylelint --fix"
+		],
+		"*.{scss,less,styl,html}": [
+			"stylelint --fix",
+			"prettier --write"
+		],
+		"*.md": [
+			"prettier --write"
+		]
+	}
 }
