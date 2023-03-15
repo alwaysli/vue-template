@@ -1,0 +1,75 @@
+@border-color: #4e67fe;
+.wraper {
+  width: 100vw;
+  height: 100vh;
+  background: #4a93f5 url('./background.jpeg') 0 0 no-repeat;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(50, 81, 218, .3);
+  }
+}
+.container {
+  width: calc(50% + 120px);
+  height: 100%;
+  margin-left: calc(50% - 120px);
+  padding: 0 240px 0 400px;
+  background-color: #fff;
+  clip-path: polygon(240px 0, 100% 0, 100% 100%, 0 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1.ant-typography {
+  color: #465577;
+  position: relative;
+  height: 60px;
+  margin-bottom: 80px;
+  &::after {
+    content: '';
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #eff4fd;
+  }
+}
+.ant-input {
+  line-height: 2;
+  border-radius: 8px;
+  &:hover {
+    border-color: @border-color;
+  }
+}
+.ant-input-group-addon {
+  padding: 0 20px;
+  background-color: @border-color;
+  color: #fff;
+  border-color: @border-color;
+  font-size: 18px;
+  border-radius: 8px 0 0 8px;
+}
+.ant-btn {
+  height: 40px;
+  margin-top: 12px;
+  background-color: @border-color;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.ant-btn-primary:focus, .ant-btn-primary:hover {
+  background-color: #2b4af6;
+}
+.anticon svg {
+  fill: #fff;
+}

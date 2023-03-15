@@ -37,7 +37,12 @@ const router = createRouter({
 });
 router.beforeEach(async (_to, _from, next) => {
 	NProgress.start();
-	next();
+	const token = localStorage.getItem('token');
+	if (token || _to.path === '/login') {
+		next();
+	} else {
+		next('/login');
+	}
 });
 
 router.afterEach(() => {
